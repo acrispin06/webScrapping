@@ -1,0 +1,43 @@
+CP Alcazar - Lima
+CP Arequipa Mall Plaza - Arequipa
+CP Arequipa Paseo Central - Arequipa
+CP Arequipa Real Plaza - Arequipa
+CP Brasil - Lima
+CP Cajamarca - Cajamarca
+CP Canto Grande - Lima
+CP Centro Civico - Lima
+CP Centro Jr De La Union - Lima
+CP Chiclayo Mall Aventura - Chiclayo
+CP Chiclayo Real Plaza - Chiclayo
+CP Comas - Lima
+CP Cusco - Cusco
+CP El Polo - Lima
+CP Guardia Civil - Lima
+CP Huancayo Real Plaza - Huancayo 
+CP Huanuco Real Plaza - Huanuco
+CP Juliaca - Juliaca
+CP La Molina - Lima
+CP Lurin - Lima
+CP Mall del Sur - Lima
+CP Norte - Lima
+CP Parque La Molina - Lima
+CP Piura - Piura
+CP Piura Real Plaza - Piura
+CP Plaza Santa Catalina - Lima 
+CP Primavera - Lima
+CP Pro - Lima
+CP Pucallpa - Pucallpa
+CP Puno - Puno
+CP Puruchuco - Lima
+CP Risso - Lima
+CP Salaverry - Lima
+CP San Borja - Lima
+CP San Juan de Lurigancho - Lima
+CP San Miguel - Lima
+CP Santa Clara - Lima
+CP Santa Clara Qhatu Plaza - Lima
+CP Tacna - Tacna
+CP Trujillo Centro - Trujillo
+CP Ventanilla - Lima
+CP Villa El Salvador - Lima
+CP Villa María del Triunfo - Lima
