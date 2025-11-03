@@ -249,53 +249,212 @@ def hacer_login(driver):
         print(f"      ✗ Error en login: {str(e)[:50]}")
         return False
 
+def abrir_sidebar_cines(driver):
+    """
+    Abre el sidebar/modal de selección de cines si está cerrado
+    Retorna: True si se abrió o ya estaba abierto
+    """
+    try:
+        print("      → Verificando sidebar de cines...")
+        
+        # Verificar si el modal ya está abierto
+        try:
+            modal_abierto = driver.find_elements(By.CSS_SELECTOR, "button[data-testid='teather-appply-button']")
+            if modal_abierto and modal_abierto[0].is_displayed():
+                print("      ✓ Modal de cines ya está abierto")
+                return True
+        except:
+            pass
+        
+        # Buscar el botón para abrir el sidebar de cines
+        selectores_abrir = [
+            "button[data-testid='teather-selector-button']",
+            "button[class*='teather']",
+            "//button[contains(text(), 'Cine')]",
+            "//button[contains(@class, 'MuiButton') and contains(., 'Cinemark')]",
+        ]
+        
+        boton_abrir = None
+        for selector in selectores_abrir:
+            try:
+                if selector.startswith("//"):
+                    elementos = driver.find_elements(By.XPATH, selector)
+                else:
+                    elementos = driver.find_elements(By.CSS_SELECTOR, selector)
+                
+                for elem in elementos:
+                    if elem.is_displayed():
+                        boton_abrir = elem
+                        break
+                
+                if boton_abrir:
+                    break
+            except:
+                continue
+        
+        if not boton_abrir:
+            print("      ⚠️ No se encontró botón para abrir sidebar (puede que ya esté abierto)")
+            return True
+        
+        # Hacer clic para abrir el sidebar
+        driver.execute_script("arguments[0].click();", boton_abrir)
+        time.sleep(2)
+        print("      ✓ Sidebar de cines abierto")
+        return True
+        
+    except Exception as e:
+        print(f"      ✗ Error abriendo sidebar: {str(e)[:50]}")
+        return False
+
+def detectar_modal_inicial_cines(driver):
+    """
+    Detecta si el modal de selección de cines aparece automáticamente
+    al entrar a una película (cuando no hay cine seleccionado)
+    Retorna: True si el modal está presente
+    """
+    try:
+        time.sleep(2)
+        
+        # Buscar el modal con la lista de cines
+        modal_elementos = driver.find_elements(By.CSS_SELECTOR, "button[data-testid='teather-appply-button']")
+        
+        if modal_elementos and modal_elementos[0].is_displayed():
+            # Verificar si el botón está deshabilitado (sin cine seleccionado)
+            boton_texto = modal_elementos[0].text
+            if "Selecciona un cine" in boton_texto or "disabled" in modal_elementos[0].get_attribute("class"):
+                print("      ✓ Modal de selección de cines detectado (se requiere selección)")
+                return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"      ⚠️ Error detectando modal: {str(e)[:50]}")
+        return False
+
+def desmarcar_cines_seleccionados(driver):
+    """
+    Desmarca cualquier cine que esté seleccionado actualmente en el modal
+    Útil para limpiar selecciones previas
+    """
+    try:
+        # Buscar checkboxes marcados (input checked)
+        checkboxes_marcados = driver.find_elements(
+            By.XPATH, 
+            "//label[@data-testid='teather-item']//input[@type='checkbox' and @data-indeterminate='false']"
+        )
+        
+        for checkbox in checkboxes_marcados:
+            try:
+                # Verificar si está checked
+                if checkbox.is_selected():
+                    # Hacer clic en el label padre para desmarcar
+                    label = checkbox.find_element(By.XPATH, "./ancestor::label[@data-testid='teather-item']")
+                    driver.execute_script("arguments[0].click();", label)
+                    time.sleep(0.3)
+            except:
+                continue
+        
+        return True
+    except Exception as e:
+        print(f"      ⚠️ Error desmarcando cines: {str(e)[:50]}")
+        return False
+
 def seleccionar_cine_en_sidebar(driver, nombre_cine):
     """
-    Selecciona un cine específico en el sidebar lateral
+    Selecciona un cine específico en el sidebar lateral o modal
     Retorna: True si selección exitosa
     """
     try:
         print(f"      → Seleccionando cine: {nombre_cine}")
         time.sleep(2)
         
-        # Buscar el checkbox del cine
+        # Primero detectar si el modal está abierto automáticamente
+        modal_auto = detectar_modal_inicial_cines(driver)
+        
+        # Si el modal no está abierto, intentar abrirlo
+        if not modal_auto:
+            if not abrir_sidebar_cines(driver):
+                print("      ✗ No se pudo abrir el sidebar de cines")
+                return False
+        
+        time.sleep(1)
+        
+        # Desmarcar cualquier cine previamente seleccionado
+        desmarcar_cines_seleccionados(driver)
+        time.sleep(0.5)
+        
+        # Buscar el checkbox del cine usando el nombre
+        # El selector usa data-testid="teather-item"
         selectores_cine = [
-            f"//p[contains(@class, 'MuiTypography') and text()='{nombre_cine}']/ancestor::label",
+            f"//label[@data-testid='teather-item']//p[@class='MuiTypography-root MuiTypography-body1 mui-mbobke' and text()='{nombre_cine}']",
+            f"//p[contains(@class, 'MuiTypography') and contains(@class, 'mui-mbobke') and text()='{nombre_cine}']/ancestor::label[@data-testid='teather-item']",
             f"//label[@data-testid='teather-item']//p[text()='{nombre_cine}']",
         ]
         
         elemento_cine = None
         for selector in selectores_cine:
             try:
-                elemento_cine = WebDriverWait(driver, 5).until(
-                    EC.presence_of_element_located((By.XPATH, selector))
-                )
-                break
+                elementos = driver.find_elements(By.XPATH, selector)
+                if elementos:
+                    # Buscar el primero visible
+                    for elem in elementos:
+                        if elem.is_displayed():
+                            elemento_cine = elem
+                            break
+                
+                if elemento_cine:
+                    break
             except:
                 continue
         
         if not elemento_cine:
-            print(f"      ✗ No se encontró el cine")
+            print(f"      ✗ No se encontró el cine '{nombre_cine}' en el sidebar")
+            # Listar cines disponibles para debug
+            try:
+                cines_disponibles = driver.find_elements(By.XPATH, "//label[@data-testid='teather-item']//p[@class='MuiTypography-root MuiTypography-body1 mui-mbobke']")
+                if cines_disponibles:
+                    print("      Cines disponibles encontrados:")
+                    for cine in cines_disponibles[:5]:
+                        print(f"        - {cine.text}")
+            except:
+                pass
             return False
         
-        # Scroll y click
+        # Scroll al elemento
         driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", elemento_cine)
         time.sleep(0.5)
+        
+        # Hacer clic en el checkbox/label
         driver.execute_script("arguments[0].click();", elemento_cine)
         time.sleep(1)
         
-        # Hacer clic en Aplicar
-        boton_aplicar = WebDriverWait(driver, 5).until(
-            EC.element_to_be_clickable((By.CSS_SELECTOR, "button[data-testid='teather-appply-button']"))
-        )
-        driver.execute_script("arguments[0].click();", boton_aplicar)
-        time.sleep(3)
+        # Esperar a que el botón "Aplicar" se habilite
+        print("      → Esperando que botón 'Aplicar' se habilite...")
+        time.sleep(1)
         
-        print(f"      ✓ Cine seleccionado")
-        return True
+        # Hacer clic en el botón "Aplicar"
+        try:
+            # Esperar a que el botón NO esté disabled
+            boton_aplicar = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.CSS_SELECTOR, "button[data-testid='teather-appply-button']"))
+            )
+            
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton_aplicar)
+            time.sleep(0.5)
+            driver.execute_script("arguments[0].click();", boton_aplicar)
+            time.sleep(3)
+            print("      ✓ Cine seleccionado y aplicado")
+            return True
+        except TimeoutException:
+            print("      ✗ Timeout: botón Aplicar no se habilitó")
+            return False
+        except Exception as e:
+            print(f"      ✗ Error al hacer clic en Aplicar: {str(e)[:50]}")
+            return False
         
     except Exception as e:
         print(f"      ✗ Error seleccionando cine: {str(e)[:50]}")
+        traceback.print_exc()
         return False
 
 def extraer_capacidad_total_sala(driver):

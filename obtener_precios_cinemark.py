@@ -280,136 +280,362 @@ def hacer_login(driver):
         print(f"✗ Error en login: {e}\n")
         return False
 
+def abrir_sidebar_cines(driver):
+    """
+    Abre el sidebar/modal de selección de cines si está cerrado
+    Retorna: True si se abrió o ya estaba abierto
+    """
+    try:
+        print(f"      → Verificando sidebar de cines...")
+        
+        # Verificar si el modal ya está abierto
+        try:
+            modal_abierto = driver.find_elements(By.CSS_SELECTOR, "button[data-testid='teather-appply-button']")
+            if modal_abierto and modal_abierto[0].is_displayed():
+                print(f"      ✓ Modal de cines ya está abierto")
+                return True
+        except:
+            pass
+        
+        # Buscar el botón para abrir el sidebar de cines
+        # Puede ser un botón con el nombre del cine actual o un icono
+        selectores_abrir = [
+            "button[data-testid='teather-selector-button']",
+            "button[class*='teather']",
+            "//button[contains(text(), 'Cine')]",
+            "//button[contains(@class, 'MuiButton') and contains(., 'Cinemark')]",
+        ]
+        
+        boton_abrir = None
+        for selector in selectores_abrir:
+            try:
+                if selector.startswith("//"):
+                    elementos = driver.find_elements(By.XPATH, selector)
+                else:
+                    elementos = driver.find_elements(By.CSS_SELECTOR, selector)
+                
+                for elem in elementos:
+                    if elem.is_displayed():
+                        boton_abrir = elem
+                        break
+                
+                if boton_abrir:
+                    break
+            except:
+                continue
+        
+        if not boton_abrir:
+            print(f"      ⚠️ No se encontró botón para abrir sidebar (puede que ya esté abierto)")
+            return True  # Asumimos que está abierto
+        
+        # Hacer clic para abrir el sidebar
+        driver.execute_script("arguments[0].click();", boton_abrir)
+        time.sleep(2)
+        print(f"      ✓ Sidebar de cines abierto")
+        return True
+        
+    except Exception as e:
+        print(f"      ✗ Error abriendo sidebar: {str(e)[:50]}")
+        return False
+
+def aceptar_cookies_si_aparece(driver):
+    """
+    Detecta y acepta el modal de cookies si aparece
+    """
+    try:
+        # Buscar el botón de aceptar cookies
+        boton_cookies = driver.find_elements(By.CSS_SELECTOR, "button[data-testid='acceptance_cookies_modal_button']")
+        if boton_cookies and boton_cookies[0].is_displayed():
+            print(f"      → Modal de cookies detectado, aceptando...")
+            driver.execute_script("arguments[0].click();", boton_cookies[0])
+            time.sleep(1)
+            print(f"      ✓ Cookies aceptadas")
+            return True
+        return False
+    except Exception as e:
+        return False
+
+def detectar_modal_inicial_cines(driver):
+    """
+    Detecta si el modal de selección de cines aparece automáticamente
+    al entrar a una película (cuando no hay cine seleccionado)
+    Retorna: True si el modal está presente
+    """
+    try:
+        # Primero aceptar cookies si aparecen
+        aceptar_cookies_si_aparece(driver)
+        
+        time.sleep(2)
+        
+        # Buscar el modal con la lista de cines
+        modal_elementos = driver.find_elements(By.CSS_SELECTOR, "button[data-testid='teather-appply-button']")
+        
+        if modal_elementos and modal_elementos[0].is_displayed():
+            # Verificar si el botón está deshabilitado (sin cine seleccionado)
+            boton_texto = modal_elementos[0].text
+            if "Selecciona un cine" in boton_texto or "disabled" in modal_elementos[0].get_attribute("class"):
+                print(f"      ✓ Modal de selección de cines detectado (se requiere selección)")
+                return True
+        
+        return False
+        
+    except Exception as e:
+        print(f"      ⚠️ Error detectando modal: {str(e)[:50]}")
+        return False
+
+def desmarcar_cines_seleccionados(driver):
+    """
+    Desmarca cualquier cine que esté seleccionado actualmente en el modal
+    Útil para limpiar selecciones previas
+    """
+    try:
+        # Buscar checkboxes marcados (input checked)
+        checkboxes_marcados = driver.find_elements(
+            By.XPATH, 
+            "//label[@data-testid='teather-item']//input[@type='checkbox' and @data-indeterminate='false']"
+        )
+        
+        for checkbox in checkboxes_marcados:
+            try:
+                # Verificar si está checked
+                if checkbox.is_selected():
+                    # Hacer clic en el label padre para desmarcar
+                    label = checkbox.find_element(By.XPATH, "./ancestor::label[@data-testid='teather-item']")
+                    driver.execute_script("arguments[0].click();", label)
+                    time.sleep(0.3)
+            except:
+                continue
+        
+        return True
+    except Exception as e:
+        print(f"      ⚠️ Error desmarcando cines: {str(e)[:50]}")
+        return False
+
 def seleccionar_cine_en_sidebar(driver, nombre_cine):
     """
-    Selecciona un cine específico en el sidebar lateral
+    Selecciona un cine específico en el sidebar lateral o modal
     Retorna: True si selección exitosa
     """
     try:
         print(f"      → Seleccionando cine: {nombre_cine}")
+        
+        # CRÍTICO: Aceptar cookies si aparecen (bloquean todo)
+        aceptar_cookies_si_aparece(driver)
         time.sleep(2)
         
+        # Primero detectar si el modal está abierto automáticamente
+        modal_auto = detectar_modal_inicial_cines(driver)
+        
+        # SIEMPRE intentar abrir el sidebar (por si no se detectó o tardó en cargar)
+        if not modal_auto:
+            print(f"      → Modal no detectado automáticamente, abriendo sidebar...")
+            if not abrir_sidebar_cines(driver):
+                print(f"      ✗ No se pudo abrir el sidebar de cines")
+                return False
+        else:
+            # Incluso si se detectó, esperar un poco más para asegurar carga
+            time.sleep(1)
+        
+        # Esperar EXPLÍCITAMENTE a que los elementos de cine se carguen
+        print(f"      → Esperando a que se carguen los cines en el modal...")
+        try:
+            WebDriverWait(driver, 15).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "label[data-testid='teather-item']"))
+            )
+            time.sleep(2)  # Espera adicional para carga completa
+            print(f"      ✓ Elementos de cine cargados")
+        except TimeoutException:
+            print(f"      ✗ Timeout esperando elementos de cine")
+            return False
+        
+        # Desmarcar cualquier cine previamente seleccionado
+        desmarcar_cines_seleccionados(driver)
+        time.sleep(0.5)
+        
         # Buscar el checkbox del cine usando el nombre
-        # El selector usa data-testid="teather-item"
+        # IMPORTANTE: El nombre está FUERA del label, en un <p> anterior
+        # Estructura: <p>Nombre</p> ... <label data-testid="teather-item">
         selectores_cine = [
-            f"//p[contains(@class, 'MuiTypography') and text()='{nombre_cine}']/ancestor::label",
-            f"//label[@data-testid='teather-item']//p[text()='{nombre_cine}']",
+            # Buscar el <p> con el nombre, luego el label que está después en el DOM
+            f"//p[@class='MuiTypography-root MuiTypography-body1 mui-mbobke' and text()='{nombre_cine}']/following::label[@data-testid='teather-item'][1]",
+            f"//p[contains(@class, 'mui-mbobke') and text()='{nombre_cine}']/following::label[@data-testid='teather-item'][1]",
+            f"//p[text()='{nombre_cine}']/following::label[@data-testid='teather-item'][1]",
         ]
         
         elemento_cine = None
         for selector in selectores_cine:
             try:
-                elemento_cine = WebDriverWait(driver, 5).until(
-                    EC.presence_of_element_located((By.XPATH, selector))
-                )
-                break
+                elementos = driver.find_elements(By.XPATH, selector)
+                if elementos:
+                    # Buscar el primero visible
+                    for elem in elementos:
+                        if elem.is_displayed():
+                            elemento_cine = elem
+                            break
+                
+                if elemento_cine:
+                    break
             except:
                 continue
         
         if not elemento_cine:
             print(f"      ✗ No se encontró el cine '{nombre_cine}' en el sidebar")
+            # Listar cines disponibles para debug
+            print(f"      → Intentando listar cines disponibles...")
+            try:
+                # Intentar varios selectores para encontrar los nombres
+                selectores_debug = [
+                    # Los nombres NO están dentro del label, están en <p> separados antes
+                    "//p[@class='MuiTypography-root MuiTypography-body1 mui-mbobke']",
+                    "//div[@class='MuiBox-root mui-1lekzkb']/p[@class='MuiTypography-root MuiTypography-body1 mui-mbobke']",
+                    "//p[contains(@class, 'mui-mbobke')]",
+                ]
+                
+                cines_disponibles = []
+                for selector in selectores_debug:
+                    try:
+                        if selector.startswith("//"):
+                            elementos = driver.find_elements(By.XPATH, selector)
+                        else:
+                            elementos = driver.find_elements(By.CSS_SELECTOR, selector)
+                        
+                        if elementos:
+                            cines_disponibles = elementos
+                            print(f"      ✓ Encontrados {len(elementos)} elementos con selector: {selector[:50]}")
+                            break
+                    except:
+                        continue
+                
+                if cines_disponibles:
+                    print(f"      → Primeros 5 cines disponibles:")
+                    for i, cine in enumerate(cines_disponibles[:5], 1):
+                        texto = cine.text.strip()
+                        if texto:
+                            print(f"        {i}. '{texto}'")
+                    if len(cines_disponibles) > 5:
+                        print(f"        ... y {len(cines_disponibles) - 5} más")
+                else:
+                    print(f"      ✗ No se encontraron elementos de cine con ningún selector")
+            except Exception as e:
+                print(f"      ⚠️ Error listando cines: {str(e)}")
             return False
         
         # Scroll al elemento
         driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", elemento_cine)
         time.sleep(0.5)
         
-        # Hacer clic en el checkbox
+        # Hacer clic en el checkbox/label
         driver.execute_script("arguments[0].click();", elemento_cine)
+        time.sleep(1)
+        
+        # Esperar a que el botón "Aplicar" se habilite
+        print(f"      → Esperando que botón 'Aplicar' se habilite...")
         time.sleep(1)
         
         # Hacer clic en el botón "Aplicar"
         try:
-            boton_aplicar = WebDriverWait(driver, 5).until(
+            # Esperar a que el botón NO esté disabled
+            boton_aplicar = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.CSS_SELECTOR, "button[data-testid='teather-appply-button']"))
             )
+            
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton_aplicar)
+            time.sleep(0.5)
             driver.execute_script("arguments[0].click();", boton_aplicar)
             time.sleep(3)
-            print(f"      ✓ Cine seleccionado")
+            print(f"      ✓ Cine seleccionado y aplicado")
             return True
-        except:
-            print(f"      ✗ No se encontró botón Aplicar")
+        except TimeoutException:
+            print(f"      ✗ Timeout: botón Aplicar no se habilitó")
+            return False
+        except Exception as e:
+            print(f"      ✗ Error al hacer clic en Aplicar: {str(e)[:50]}")
             return False
         
     except Exception as e:
         print(f"      ✗ Error seleccionando cine: {str(e)[:50]}")
+        traceback.print_exc()
         return False
 
 def extraer_precios_de_pagina(driver):
     """
     Extrae los precios de la página de compra de Cinemark
-    Retorna: [{'tipo': 'General', 'precio': '25.00'}, ...]
+    Retorna: [{'categoria': 'GENERAL', 'tipo': 'PROMO ONLINE', 'precio': '8.50'}, ...]
     """
     precios = []
     try:
-        time.sleep(3)
+        time.sleep(2)
         
         print("      → Extrayendo precios...")
         
-        # Buscar elementos de precio en la página
-        # Los precios suelen estar en elementos con clases como "price", "amount", etc.
-        selectores_precio = [
-            "div[class*='price']",
-            "span[class*='price']",
-            "p[class*='price']",
-            "div[class*='amount']",
-        ]
+        # Buscar todas las secciones de precios (GENERAL y CONVENIOS)
+        # Cada sección tiene un <h2> con el título y luego los ticket-card dentro
+        secciones = driver.find_elements(By.CSS_SELECTOR, "div.MuiBox-root.mui-0")
         
-        elementos_precio = []
-        for selector in selectores_precio:
-            try:
-                elementos = driver.find_elements(By.CSS_SELECTOR, selector)
-                if elementos:
-                    elementos_precio = elementos
-                    break
-            except:
-                continue
-        
-        if not elementos_precio:
-            print("      ✗ No se encontraron elementos de precio")
+        if not secciones:
+            print("      ✗ No se encontraron secciones de precios")
             return []
         
-        # Extraer texto de cada elemento y buscar patrones de precio
-        patron_precio = re.compile(r'S/?\s*(\d+\.?\d*)')
+        patron_precio = re.compile(r'S/\s*(\d+\.?\d*)')
         
-        for elem in elementos_precio:
+        for seccion in secciones:
             try:
-                texto = elem.text.strip()
-                match = patron_precio.search(texto)
-                if match:
-                    precio = match.group(1)
-                    
-                    # Intentar determinar el tipo de entrada
-                    tipo = "General"
-                    if "socio" in texto.lower() or "miembro" in texto.lower():
-                        tipo = "Socio"
-                    elif "niño" in texto.lower() or "kids" in texto.lower():
-                        tipo = "Niño"
-                    
-                    precios.append({
-                        'tipo': tipo,
-                        'precio': precio
-                    })
-            except:
+                # Buscar el h2 con la categoría (general/convenios)
+                h2_elementos = seccion.find_elements(By.CSS_SELECTOR, "h2.MuiTypography-h2")
+                if not h2_elementos:
+                    continue
+                
+                categoria = h2_elementos[0].text.strip().upper()
+                if not categoria or categoria not in ['GENERAL', 'CONVENIOS']:
+                    continue
+                
+                # Buscar todos los ticket-card en esta sección
+                tickets = seccion.find_elements(By.CSS_SELECTOR, "div[data-testid='ticket-card']")
+                
+                for ticket in tickets:
+                    try:
+                        # Extraer el tipo de entrada (p con clase mui-ntz2ds)
+                        tipo_elem = ticket.find_element(By.CSS_SELECTOR, "p.MuiTypography-body2.mui-ntz2ds")
+                        tipo_entrada = tipo_elem.text.strip()
+                        
+                        # Extraer el precio (p con clase mui-12idbfl)
+                        precio_elem = ticket.find_element(By.CSS_SELECTOR, "p.MuiTypography-body2.mui-12idbfl")
+                        precio_texto = precio_elem.text.strip()
+                        
+                        # Extraer solo el número del precio
+                        match = patron_precio.search(precio_texto)
+                        if match:
+                            precio = match.group(1)
+                            
+                            precios.append({
+                                'categoria': categoria,
+                                'tipo': tipo_entrada,
+                                'precio': precio
+                            })
+                    except Exception as e:
+                        continue
+                        
+            except Exception as e:
                 continue
         
         # Eliminar duplicados
         precios_unicos = []
         precios_vistos = set()
         for p in precios:
-            key = f"{p['tipo']}_{p['precio']}"
+            key = f"{p['categoria']}_{p['tipo']}_{p['precio']}"
             if key not in precios_vistos:
                 precios_unicos.append(p)
                 precios_vistos.add(key)
         
         print(f"      ✓ Extraídos {len(precios_unicos)} precios")
         for p in precios_unicos:
-            print(f"        • {p['tipo']}: S/{p['precio']}")
+            print(f"        • [{p['categoria']}] {p['tipo']}: S/{p['precio']}")
         
         return precios_unicos
         
     except Exception as e:
         print(f"      ✗ Error extrayendo precios: {str(e)[:100]}")
+        traceback.print_exc()
         return []
 
 def cancelar_compra_y_volver(driver, url_pelicula):
@@ -451,56 +677,46 @@ def cancelar_compra_y_volver(driver, url_pelicula):
 
 def procesar_pelicula_cine(driver, pelicula, cine_nombre, tiene_sesion):
     """
-    Procesa una película en un cine específico y extrae los precios
+    Procesa una película en un cine específico y extrae los precios.
+    ASUME que ya estamos en la página de la película y el cine ya está seleccionado.
     """
     datos_extraidos = []
     
     try:
-        # Construir URL de la película
-        url_pelicula = f"{BASE_URL}/pelicula/{pelicula['slug']}"
-        print(f"    → Película: {pelicula['nombre']}")
-        print(f"      URL: {url_pelicula}")
-        
-        # Navegar a la película
-        driver.get(url_pelicula)
-        time.sleep(4)
-        
-        # Limpiar cache y cookies
-        limpiar_cache_y_cookies(driver)
-        time.sleep(2)
-        
-        # Seleccionar cine en el sidebar
-        if not seleccionar_cine_en_sidebar(driver, cine_nombre):
-            print(f"      ✗ No se pudo seleccionar el cine")
-            return []
+        print(f"    → Buscando horarios disponibles...")
         
         # Buscar y hacer clic en el primer horario disponible
         try:
-            # Buscar botones de horario
+            # Buscar tarjetas de horario (estructura: div.showtime-card-item)
             selectores_horario = [
-                "button[class*='showtime']",
-                "button[class*='schedule']",
-                "button[class*='session']",
+                "div.showtime-card-item",  # Clase exacta de las tarjetas de horario
+                "div[class*='showtime-card']",
+                "div[class*='mui-v86l4p']",  # Clase específica vista en el HTML
             ]
             
-            boton_horario = None
+            elemento_horario = None
             for selector in selectores_horario:
                 try:
-                    botones = driver.find_elements(By.CSS_SELECTOR, selector)
-                    if botones:
-                        boton_horario = botones[0]
-                        break
+                    elementos = driver.find_elements(By.CSS_SELECTOR, selector)
+                    if elementos:
+                        # Filtrar solo elementos visibles
+                        elementos_visibles = [e for e in elementos if e.is_displayed()]
+                        if elementos_visibles:
+                            elemento_horario = elementos_visibles[0]
+                            print(f"    ✓ Encontrados {len(elementos_visibles)} horarios con selector: {selector}")
+                            break
                 except:
                     continue
             
-            if not boton_horario:
-                print(f"      ✗ No hay horarios disponibles")
+            if not elemento_horario:
+                print(f"    ✗ No hay horarios disponibles")
                 return []
             
+            print(f"    → Haciendo clic en horario...")
             # Hacer clic en el horario
-            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton_horario)
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", elemento_horario)
             time.sleep(0.5)
-            driver.execute_script("arguments[0].click();", boton_horario)
+            driver.execute_script("arguments[0].click();", elemento_horario)
             time.sleep(3)
             
         except Exception as e:
@@ -530,31 +746,36 @@ def procesar_pelicula_cine(driver, pelicula, cine_nombre, tiene_sesion):
                     continue
             
             if not boton_comprar:
-                print(f"      ✗ No se encontró botón COMPRAR ENTRADAS")
+                print(f"    ✗ No se encontró botón COMPRAR ENTRADAS")
                 return []
             
+            print(f"    → Haciendo clic en COMPRAR ENTRADAS...")
             driver.execute_script("arguments[0].click();", boton_comprar)
-            time.sleep(3)
+            time.sleep(3)  # Esperar pantalla de pre-compra
             
         except Exception as e:
-            print(f"      ✗ Error haciendo clic en COMPRAR: {str(e)[:50]}")
+            print(f"    ✗ Error haciendo clic en COMPRAR: {str(e)[:50]}")
             return []
         
-        # Si tiene sesión, hacer login
-        if tiene_sesion:
-            if not hacer_login(driver):
-                print(f"      ✗ Login falló")
-                return []
+        # YA NO necesitamos hacer login aquí - se hizo al inicio del script
+        # La sesión se mantiene durante toda la ejecución
         
-        # Hacer clic en "Continuar" después del login
+        # Hacer clic en el botón "Continuar" para ir a la página de precios
         try:
+            print(f"    → Haciendo clic en botón 'Continuar'...")
+            # Usar contains() para mayor flexibilidad con espacios/formato
             boton_continuar = WebDriverWait(driver, 10).until(
-                EC.element_to_be_clickable((By.XPATH, "//button[contains(text(), 'CONTINUAR') or contains(text(), 'Continuar')]"))
+                EC.presence_of_element_located((By.XPATH, "//button[contains(@class, 'MuiButton-fixedPrimary')]//div[contains(text(), 'Continuar')]"))
             )
+            # Scroll al centro de la pantalla
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton_continuar)
+            time.sleep(1)
             driver.execute_script("arguments[0].click();", boton_continuar)
-            time.sleep(3)
-        except:
-            print(f"      ⚠️ No se encontró botón Continuar (puede ser opcional)")
+            time.sleep(5)  # Esperar que cargue la página con los precios
+            print(f"    ✓ Página de precios cargada")
+        except Exception as e:
+            print(f"    ✗ Error al hacer clic en 'Continuar': {str(e)[:100]}")
+            return []
         
         # Extraer precios
         precios = extraer_precios_de_pagina(driver)
@@ -570,7 +791,7 @@ def procesar_pelicula_cine(driver, pelicula, cine_nombre, tiene_sesion):
         except:
             pass
         
-        # Construir datos extraídos
+        # Construir datos extraídos con el nuevo formato
         for precio_data in precios:
             datos_extraidos.append({
                 'cine': cine_nombre,
@@ -578,11 +799,11 @@ def procesar_pelicula_cine(driver, pelicula, cine_nombre, tiene_sesion):
                 'modalidad': modalidad,
                 'tipo_entrada': precio_data['tipo'],
                 'precio': precio_data['precio'],
-                'beneficio': 'Si' if tiene_sesion else 'No'
+                'beneficio': precio_data['categoria']  # Ahora es 'GENERAL' o 'CONVENIOS'
             })
         
-        # Cancelar compra y volver
-        cancelar_compra_y_volver(driver, url_pelicula)
+        # Ya no necesitamos cancelar y volver - el main() se encarga de volver a la película
+        print(f"    ✓ Extracción completada para este cine")
         
         return datos_extraidos
         
@@ -612,6 +833,34 @@ def main():
     try:
         # Configurar driver
         driver = configurar_driver()
+        
+        # IMPORTANTE: Hacer login AL INICIO para mantener sesión durante toda la extracción
+        tiene_sesion = bool(EMAIL and PASSWORD)
+        if tiene_sesion:
+            print("→ Realizando login inicial...")
+            print("  (Esto evitará el modal de login en cada compra)")
+            # Ir a la página principal primero
+            driver.get(BASE_URL)
+            time.sleep(3)
+            
+            # Aceptar cookies si aparecen
+            try:
+                boton_cookies = driver.find_elements(By.CSS_SELECTOR, "button[data-testid='acceptance_cookies_modal_button']")
+                if boton_cookies and boton_cookies[0].is_displayed():
+                    print("  → Aceptando cookies...")
+                    driver.execute_script("arguments[0].click();", boton_cookies[0])
+                    time.sleep(2)
+            except:
+                pass
+            
+            # Hacer login
+            if hacer_login(driver):
+                print("✓ Sesión iniciada correctamente\n")
+            else:
+                print("⚠️ No se pudo iniciar sesión, continuando sin login\n")
+                tiene_sesion = False
+        else:
+            print("→ Modo sin login\n")
         
         # Cargar películas desde la página principal
         peliculas = cargar_peliculas_desde_lista(driver)
@@ -644,7 +893,7 @@ def main():
             print(f"  (Limitado a {MAX_CINES} por configuración)\n")
         
         print(f"\n{'='*80}")
-        print(f"PROCESANDO {len(cines)} CINES × {len(peliculas)} PELÍCULAS")
+        print(f"PROCESANDO {len(peliculas)} PELÍCULAS × {len(cines)} CINES")
         print(f"{'='*80}\n")
         
         # Crear archivo CSV con encabezados
@@ -655,18 +904,34 @@ def main():
             ])
             writer.writeheader()
         
-        # Determinar si tiene sesión
-        tiene_sesion = bool(EMAIL and PASSWORD)
+        # tiene_sesion ya se definió al inicio (después del login)
         
-        # Procesar cada cine
-        for idx_cine, cine_nombre in enumerate(cines, 1):
-            print(f"\n[CINE {idx_cine}/{len(cines)}] {cine_nombre}")
-            print("-" * 80)
+        # NUEVA LÓGICA: Procesar cada PELÍCULA, probando todos los CINES
+        for idx_pelicula, pelicula in enumerate(peliculas, 1):
+            print(f"\n[PELÍCULA {idx_pelicula}/{len(peliculas)}] {pelicula['nombre']}")
+            print("=" * 80)
             
-            # Procesar cada película en este cine
-            for idx_pelicula, pelicula in enumerate(peliculas, 1):
-                print(f"  [{idx_pelicula}/{len(peliculas)}]")
+            # Navegar a la película UNA VEZ
+            url_pelicula = f"{BASE_URL}/pelicula/{pelicula['slug']}"
+            print(f"URL: {url_pelicula}")
+            driver.get(url_pelicula)
+            time.sleep(3)
+            
+            # Probar cada cine para esta película
+            for idx_cine, cine_nombre in enumerate(cines, 1):
+                print(f"\n  [{idx_cine}/{len(cines)}] Cine: {cine_nombre}")
+                print("  " + "-" * 76)
                 
+                # Seleccionar el cine en el modal
+                print(f"    → Seleccionando cine en el modal...")
+                if not seleccionar_cine_en_sidebar(driver, cine_nombre):
+                    print(f"    ✗ No se pudo seleccionar el cine, pasando al siguiente")
+                    continue
+                
+                # Esperar a que se actualice la página con el cine seleccionado
+                time.sleep(3)
+                
+                # Intentar procesar esta combinación película-cine
                 datos_pelicula = procesar_pelicula_cine(driver, pelicula, cine_nombre, tiene_sesion)
                 
                 if datos_pelicula:
@@ -680,8 +945,12 @@ def main():
                     
                     todos_los_datos.extend(datos_pelicula)
                     print(f"    ✓ Guardados {len(datos_pelicula)} registros")
+                else:
+                    print(f"    → No hay datos para esta combinación")
                 
-                time.sleep(2)  # Pausa entre películas
+                # Volver a la página de la película para probar el siguiente cine
+                driver.get(url_pelicula)
+                time.sleep(2)
         
         # Renombrar archivo final
         if todos_los_datos:
