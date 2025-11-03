@@ -1,0 +1,119 @@
+================================================================================
+                   EXTRACCIÓN PROGRAMADA - 3:00 AM
+================================================================================
+
+📊 RESULTADO DE HOY (8:42 PM):
+   • Cines procesados: 23 de 43
+   • Registros: 151
+   • Problema: Solo funciones nocturnas disponibles
+
+🎯 SOLUCIÓN: Programar para las 3:00 AM
+
+================================================================================
+                         PASOS A SEGUIR
+================================================================================
+
+1️⃣  PROGRAMAR TAREA (hacer AHORA)
+   
+   Ejecutar como ADMINISTRADOR:
+   → PROGRAMAR_EXTRACCION_3AM.bat
+   
+   Esto creará una tarea que se ejecutará automáticamente
+   mañana a las 3:00 AM
+
+2️⃣  DESACTIVAR SUSPENSIÓN (antes de dormir)
+   
+   Ejecutar como ADMINISTRADOR:
+   → DESACTIVAR_SUSPENSION.bat
+   
+   Esto evita que el PC se suspenda durante la noche
+
+3️⃣  DEJAR PC ENCENDIDO
+   
+   • PC encendido (no suspendido)
+   • Conectado a corriente (si es portátil)
+   • Conexión a internet activa
+
+4️⃣  VERIFICAR MAÑANA (después de las 7 AM)
+   
+   Ejecutar:
+   → VERIFICAR_TAREA_PROGRAMADA.bat
+   
+   O revisar archivos:
+   • capacidades_cineplanet_COMPLETO_YYYYMMDD_HHMMSS.csv
+   • extraccion_capacidades_log.txt
+
+5️⃣  REACTIVAR SUSPENSIÓN (opcional)
+   
+   Ejecutar como ADMINISTRADOR:
+   → REACTIVAR_SUSPENSION.bat
+
+================================================================================
+                    ¿QUÉ ESPERAR A LAS 3 AM?
+================================================================================
+
+⏰ Inicio: 3:00 AM
+📦 Procesamiento: 2-4 horas
+✅ Finalización: ~5-7 AM
+
+📊 Resultados esperados:
+   • Todos los 43 cines procesados
+   • 2,000 - 5,000 registros (vs 151 actual)
+   • Horarios completos: 10 AM - 11 PM
+   • Todas las películas del día
+
+================================================================================
+                        ARCHIVOS ÚTILES
+================================================================================
+
+📝 Configuración:
+   PROGRAMAR_EXTRACCION_3AM.bat      ← Crear tarea programada
+   VERIFICAR_TAREA_PROGRAMADA.bat    ← Ver estado de la tarea
+   ELIMINAR_TAREA_PROGRAMADA.bat     ← Eliminar tarea
+
+📖 Guías:
+   GUIA_EXTRACCION_3AM.md            ← Guía completa detallada
+   README_EXTRACCION_CAPACIDADES.md  ← Documentación del script
+
+⚙️ Scripts:
+   inspector_asientos_totales.py     ← Script de extracción
+   DESACTIVAR_SUSPENSION.bat         ← Evitar suspensión
+   REACTIVAR_SUSPENSION.bat          ← Reactivar suspensión
+
+================================================================================
+                    VERIFICAR TAREA PROGRAMADA
+================================================================================
+
+Después de ejecutar PROGRAMAR_EXTRACCION_3AM.bat, puedes verificar:
+
+En PowerShell:
+   schtasks /Query /TN "Extraccion_Capacidades_Cineplanet"
+
+O en "Programador de tareas" (Task Scheduler):
+   • Buscar: Extraccion_Capacidades_Cineplanet
+   • Estado: Preparada (Ready)
+   • Próxima ejecución: 09/10/2025 03:00 AM
+
+================================================================================
+                           ⚠️ IMPORTANTE
+================================================================================
+
+✓ El PC DEBE estar encendido a las 3:00 AM
+✓ Desactiva la suspensión automática antes de dormir
+✓ Asegúrate de tener conexión a internet
+✓ Si es portátil, conecta el cargador
+
+Si el PC se suspende, la tarea NO se ejecutará!
+
+================================================================================
+                          🎉 ¡TODO LISTO!
+================================================================================
+
+Ahora solo necesitas:
+1. Ejecutar PROGRAMAR_EXTRACCION_3AM.bat (como admin)
+2. Desactivar suspensión antes de dormir
+3. Despertar mañana con los datos completos!
+
+Para más detalles, lee: GUIA_EXTRACCION_3AM.md
+
+================================================================================

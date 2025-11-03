@@ -1,4 +1,4 @@
-﻿from selenium import webdriver
+from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
@@ -15,7 +15,7 @@ import unicodedata
 BASE_URL = 'https://www.cineplanet.com.pe'
 HEADLESS = False  # True = modo sin ventana (menos recursos, evita suspensión de PC)
 TIMEOUT = 20
-MAX_CINES = None  # PRUEBA: 1 cine
+MAX_CINES = 1  # PRUEBA: 1 cine para probar conteo de asientos
 
 EMAIL = "72669293"
 PASSWORD = "Lizmoi2003"
@@ -140,16 +140,17 @@ def hacer_login(driver, es_relogin=False):
         print("Sin credenciales - Solo precios sin beneficio\n")
         return False
     try:
+        print("Intentando hacer login...")
+        
+        # Si es re-login, dar más tiempo y limpiar el estado
         if es_relogin:
-            print("   → Re-login...")
-        else:
-            print("Intentando hacer login...")
+            driver.delete_all_cookies()
+            time.sleep(2)
         
-        # Ir a página de login
         driver.get(f"{BASE_URL}/autenticacion/login")
-        time.sleep(5)
+        time.sleep(7 if es_relogin else 5)  # Más tiempo para re-login
         
-        # Manejar popups
+        # Manejar popups que puedan aparecer
         try:
             manejar_popups_iniciales(driver)
         except:
@@ -222,7 +223,7 @@ def cargar_lista_cines_desde_txt():
             cines = cines[:MAX_CINES]
             print(f"  (Limitado a {MAX_CINES} por configuración)")
         
-        print(f"\nLista de cines:")
+        print(f"\n📋 Lista de cines:")
         for i, nombre in enumerate(cines, 1):
             slug = normalizar_slug(nombre)
             print(f"   {i:2d}. {nombre:45s} → {slug}")
@@ -273,7 +274,7 @@ def cancelar_compra(driver):
                 time.sleep(2)
                 print("              ✓ Botón cerrar clickeado")
             else:
-                print("              No se encontró botón de cerrar")
+                print("              ⚠️ No se encontró botón de cerrar")
                 return False
                 
         except Exception as e:
@@ -310,7 +311,7 @@ def cancelar_compra(driver):
                 print("              ✓ Compra cancelada")
                 return True
             else:
-                print("              No se encontró botón 'Cancelar Compra'")
+                print("              ⚠️ No se encontró botón 'Cancelar Compra'")
                 return False
                 
         except Exception as e:
@@ -327,11 +328,10 @@ def cancelar_compra(driver):
 
 def limpiar_cache_y_datos_navegador(driver):
     """
-    Limpieza selectiva que NO elimina cookies de sesión/login
-    Solo limpia localStorage y sessionStorage
+    Limpieza PROFUNDA de todo lo que el servidor podría usar para rastrear compras
     """
     try:
-        print("              → Limpiando datos temporales...")
+        print("              → Limpiando caché y datos del navegador...")
         
         # 1. Limpiar localStorage
         try:
@@ -345,46 +345,20 @@ def limpiar_cache_y_datos_navegador(driver):
         except Exception as e:
             pass
         
-        # 3. NO eliminamos cookies - mantener sesión activa
-        # Las cookies contienen información de login que necesitamos preservar
+        # 3. Limpiar todas las cookies
+        try:
+            driver.delete_all_cookies()
+        except Exception as e:
+            pass
         
         # 4. Pequeña pausa para que los cambios se propaguen
         time.sleep(1)
         
-        print("              ✓ Limpieza completada (sesión preservada)")
+        print("              ✓ Limpieza profunda completada")
         return True
         
     except Exception as e:
-        print(f"              ⚠️ Error en limpieza: {str(e)[:50]}")
-        return False
-
-def limpiar_cache_y_datos_navegador(driver):
-    """
-    Limpieza selectiva que NO elimina cookies de sesión/login
-    Solo limpia localStorage y sessionStorage
-    """
-    try:
-        # 1. Limpiar localStorage
-        try:
-            driver.execute_script("window.localStorage.clear();")
-        except:
-            pass
-        
-        # 2. Limpiar sessionStorage
-        try:
-            driver.execute_script("window.sessionStorage.clear();")
-        except:
-            pass
-        
-        # 3. NO eliminamos cookies - mantener sesión activa
-        # Las cookies contienen información de login que necesitamos preservar
-        
-        # 4. Pequeña pausa
-        time.sleep(0.5)
-        
-        return True
-        
-    except Exception as e:
+        print(f"              Error en limpieza profunda: {str(e)[:50]}")
         return False
 
 def seleccionar_asiento_y_continuar(driver):
@@ -425,7 +399,7 @@ def seleccionar_asiento_y_continuar(driver):
         try:
             error_msg = driver.find_element(By.CSS_SELECTOR, ".alert, .error, [class*='error']")
             if error_msg.is_displayed():
-                print(f"             Alerta: {error_msg.text[:50]}")
+                print(f"              ⚠️ Alerta: {error_msg.text[:50]}")
         except:
             pass
         
@@ -489,8 +463,11 @@ def extraer_precios_de_pagina(driver, tiene_sesion):
         # 1. EXTRAER PRECIOS GENERALES (sin beneficio)
         print("              → Extrayendo precios generales...")
         try:
-            # Buscar directamente las categorías de entradas (sin buscar contenedor padre)
-            categorias_generales = driver.find_elements(By.CSS_SELECTOR, ".purchase-tickets--common-tickets--categories .purchase-tickets--common-tickets-categories")
+            # Buscar el contenedor principal de entradas generales
+            seccion_general = driver.find_element(By.CSS_SELECTOR, ".purchase-tickets--common-tickets")
+            
+            # Extraer todas las categorías de entradas
+            categorias_generales = seccion_general.find_elements(By.CSS_SELECTOR, ".purchase-tickets--common-tickets-categories")
             
             print(f"              → Encontradas {len(categorias_generales)} categorías generales")
             
@@ -661,7 +638,7 @@ def extraer_peliculas_y_precios_de_cine(driver, cine_nombre, tiene_sesion):
         print(f"     ✓ Encontradas {len(peliculas_encontradas)} películas")
         
         total_peliculas = len(peliculas_encontradas)
-        MAX_PELICULAS = None  # PRUEBA: 1 película
+        MAX_PELICULAS = 1  # PRUEBA: 1 película
         
         # USAR ÍNDICES para evitar elementos stale
         idx_pelicula = 0
@@ -687,7 +664,7 @@ def extraer_peliculas_y_precios_de_cine(driver, cine_nombre, tiene_sesion):
                 modalidades = extraer_modalidades_y_horarios_de_pelicula(pelicula_elem)
                 
                 if not modalidades:
-                    print(f"        Sin horarios disponibles")
+                    print(f"        ⚠️ Sin horarios disponibles")
                     idx_pelicula += 1
                     continue
                 
@@ -734,17 +711,9 @@ def extraer_peliculas_y_precios_de_cine(driver, cine_nombre, tiene_sesion):
                         
                         print(f"              ✓ Extraídos {len(precios)} precios")
                         
-                        # Cancelar compra
+                        # Cancelar compra y limpiar
                         cancelar_compra(driver)
-                        
-                        # Limpiar datos temporales (localStorage y sessionStorage)
                         limpiar_cache_y_datos_navegador(driver)
-                        
-                        # ESTRATEGIA SIMPLE: Siempre hacer re-login después de cada película
-                        # Cineplanet cierra la sesión automáticamente, así que re-autenticamos
-                        print("              → Haciendo re-login para siguiente película...")
-                        if EMAIL and PASSWORD:
-                            tiene_sesion = hacer_login(driver, es_relogin=True)
                         
                         # Volver al cine
                         driver.get(url_cine)
@@ -859,10 +828,10 @@ def main():
             print(f"✓ Archivo guardado:  {archivo_final}")
             print("=" * 80)
         else:
-            print("\nNo se extrajeron datos")
+            print("\n⚠️ No se extrajeron datos")
             
     except KeyboardInterrupt:
-        print("\n\nExtracción interrumpida por el usuario")
+        print("\n\n⚠️ Extracción interrumpida por el usuario")
         if todos_los_datos:
             print(f"Datos guardados hasta el momento en: {archivo_progreso}")
     except Exception as e:

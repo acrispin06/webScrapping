@@ -1,0 +1,72 @@
+{
+  "fecha_generacion": "2025-10-20 13:00:35",
+  "selectores": {
+    "login": {
+      "popup_cookies": [
+        "//button[contains(text(), 'Aceptar')]",
+        "button[class*='consent']"
+      ],
+      "campo_email": "input[name='cineplanet-code']",
+      "campo_password": "input[name='password']",
+      "boton_submit": "button[type='submit']",
+      "verificacion_exito": "No debe contener 'login' o 'autenticacion' en URL"
+    },
+    "cine": {
+      "filtro_fecha": {
+        "selector": "select.dropdown--select",
+        "alternativo": "#button-ui-0",
+        "descripcion": "Dropdown con opciones de fechas (Hoy, Mañana, etc.)",
+        "contenedor": ".dropdown.city-cinema-day-select--drop-down.date--cinemas",
+        "opciones": "option.dropdown--select-option",
+        "valor": "Valores ISO como '2025-10-20T00:00:00'"
+      },
+      "contenedor_peliculas": "div.movies-list-schedules--large-item",
+      "titulo_pelicula": "h2",
+      "modalidad": ".movies-list-schedules--small-movie-description-attribute",
+      "boton_horario": "button.showtime-selector--link"
+    },
+    "asientos": {
+      "asiento_disponible": ".seat-map--seat.seat-map--seat_available",
+      "boton_continuar": {
+        "xpath": "//button[contains(@class, 'call-to-action')]",
+        "verificar": "No debe tener clase 'disabled'"
+      },
+      "verificacion_pagina": "URL debe contener '/asientos'"
+    },
+    "precios": {
+      "precio_general": {
+        "principal": ".bill-summary--total-price",
+        "fallback": "//*[contains(text(), 'S/')]"
+      },
+      "precio_socio": {
+        "contenedor": ".bill-summary--benefits",
+        "precio_dentro": ".bill-summary--total-price"
+      },
+      "boton_cancelar": [
+        "button.close",
+        "button[aria-label='close']"
+      ],
+      "verificacion_pagina": "URL debe contener '/compra/'"
+    }
+  },
+  "flujo_completo": [
+    "1. Hacer login → manejar popup cookies → rellenar formulario → verificar URL",
+    "2. Ir a cine → seleccionar fecha (si existe filtro) → listar películas",
+    "3. Click en horario → verificar URL /asientos",
+    "4. Seleccionar asiento → click en Continuar → verificar URL /compra/",
+    "5. Extraer precios (general y socio) → cancelar compra → limpiar caché"
+  ],
+  "archivos_generados": [
+    "login_page_source.html",
+    "login_page_screenshot.png",
+    "cine_page_source.html",
+    "cine_page_screenshot.png",
+    "cine_estructura.json"
+  ],
+  "notas": [
+    "Revisar archivos HTML generados para confirmar selectores",
+    "Verificar screenshots para identificar filtro de fechas",
+    "Algunos selectores pueden variar según la película/cine",
+    "Siempre verificar que elementos no tengan clase 'disabled'"
+  ]
+}

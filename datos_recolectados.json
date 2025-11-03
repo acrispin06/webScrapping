@@ -1,0 +1,3824 @@
+[
+  {
+    "cine": "CP Alcazar",
+    "cine_slug": "cp-alcazar",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-alcazar",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:00",
+          "16:10"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "17:00",
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:50",
+          "17:40",
+          "19:30",
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Una Batalla Tras Otra",
+        "horarios": [
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "20:00",
+          "22:25"
+        ]
+      },
+      {
+        "nombre": "La Máquina The Smashing Machine",
+        "horarios": [
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Homo Argentum",
+        "horarios": [
+          "16:50"
+        ]
+      },
+      {
+        "nombre": "Downton Abbey El Gran Final",
+        "horarios": [
+          "15:30"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:40",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "18:20",
+          "21:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Arequipa Mall Plaza",
+    "cine_slug": "cp-arequipa-mall-plaza",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-arequipa-mall-plaza",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Springsteen Música de Ninguna Parte",
+        "horarios": [
+          "16:10",
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "20:40"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "16:40",
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:15",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "18:50"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "17:20",
+          "19:40",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:05"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "17:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Arequipa Paseo Central",
+    "cine_slug": "cp-arequipa-paseo-central",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-arequipa-paseo-central",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "20:00",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:00",
+          "18:40",
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:30",
+          "17:40",
+          "19:50",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:30",
+          "19:00",
+          "21:30"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:40",
+          "20:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "17:50"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Arequipa Real Plaza",
+    "cine_slug": "cp-arequipa-real-plaza",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-arequipa-real-plaza",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "16:20",
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "20:40"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "15:40",
+          "18:20",
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "17:10",
+          "19:20",
+          "20:10",
+          "21:30",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "17:00",
+          "19:30",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Demon Slayer Castillo Infinito",
+        "horarios": [
+          "15:50"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:30",
+          "18:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Brasil",
+    "cine_slug": "cp-brasil",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-brasil",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "20:40"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "16:30",
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "16:40"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:10",
+          "17:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "19:10",
+          "21:50"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Cajamarca",
+    "cine_slug": "cp-cajamarca",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-cajamarca",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:30",
+          "17:30"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Canto Grande",
+    "cine_slug": "cp-canto-grande",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-canto-grande",
+    "peliculas": [
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "16:30"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Centro Civico",
+    "cine_slug": "cp-centro-civico",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-centro-civico",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:50"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "20:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "15:40",
+          "18:20",
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "17:30"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "16:10"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Centro Jr De La Union",
+    "cine_slug": "cp-centro-jr-de-la-union",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-centro-jr-de-la-union",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:40",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Terminal Zombie",
+        "horarios": [
+          "20:00",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:10",
+          "18:20",
+          "20:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "19:50",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:30",
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "17:00"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "15:50"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Chiclayo Mall Aventura",
+    "cine_slug": "cp-chiclayo-mall-aventura",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-chiclayo-mall-aventura",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:40",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Terminal Zombie",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "16:40",
+          "18:40",
+          "20:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:20",
+          "16:30",
+          "17:40",
+          "18:50",
+          "19:50",
+          "21:00",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "15:00"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:50",
+          "19:20",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "16:10"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "17:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "20:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Chiclayo Real Plaza",
+    "cine_slug": "cp-chiclayo-real-plaza",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-chiclayo-real-plaza",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:00"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "20:40"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "14:20",
+          "16:40",
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "15:40",
+          "18:20",
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "14:50",
+          "19:50"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:50",
+          "19:30",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "16:30"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "17:00"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "19:10",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "17:20",
+          "22:20"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Comas",
+    "cine_slug": "cp-comas",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-comas",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:40",
+          "17:30",
+          "19:20",
+          "20:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "17:00"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:00",
+          "19:40"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:10",
+          "17:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "21:30"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Cusco",
+    "cine_slug": "cp-cusco",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-cusco",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:30",
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "18:00",
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "20:40"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:50",
+          "16:40",
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "17:10",
+          "19:20",
+          "21:30",
+          "16:00",
+          "18:10",
+          "22:30",
+          "20:20"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "17:00",
+          "22:05"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Raíz",
+        "horarios": [
+          "19:15",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "19:50",
+          "22:15"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "20:30",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "Frankie y los Monstruos",
+        "horarios": [
+          "17:05"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:45",
+          "18:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "16:35",
+          "19:10",
+          "21:50"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP El Polo",
+    "cine_slug": "cp-el-polo",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-el-polo",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:20",
+          "17:20"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "15:10",
+          "19:50"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:50",
+          "17:40",
+          "19:30",
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "19:00",
+          "21:40",
+          "16:20"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "21:10",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "La Máquina The Smashing Machine",
+        "horarios": [
+          "17:30"
+        ]
+      },
+      {
+        "nombre": "Cuando el Cielo se Equivoca",
+        "horarios": [
+          "20:00",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "15:00",
+          "17:10",
+          "21:50"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Guardia Civil",
+    "cine_slug": "cp-guardia-civil",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-guardia-civil",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "15:10"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "17:40",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "16:50"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Huancayo Real Plaza",
+    "cine_slug": "cp-huancayo-real-plaza",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-huancayo-real-plaza",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "14:40",
+          "15:40",
+          "16:50",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Terminal Zombie",
+        "horarios": [
+          "20:00",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "14:30",
+          "16:30",
+          "20:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "17:00"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "19:10",
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Frankie y los Monstruos",
+        "horarios": [
+          "14:45"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "18:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "16:10"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Huanuco Real Plaza",
+    "cine_slug": "cp-huanuco-real-plaza",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-huanuco-real-plaza",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:00",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:30",
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Juliaca",
+    "cine_slug": "cp-juliaca",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-juliaca",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:40",
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP La Molina",
+    "cine_slug": "cp-la-molina",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-la-molina",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:50",
+          "17:40",
+          "19:40",
+          "21:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "20:00",
+          "22:25"
+        ]
+      },
+      {
+        "nombre": "Los Patos y las Patas",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Jesús Luz del Mundo",
+        "horarios": [
+          "15:40",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Cuando el Cielo se Equivoca",
+        "horarios": [
+          "17:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:00"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "19:50",
+          "22:20"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Lurin",
+    "cine_slug": "cp-lurin",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-lurin",
+    "peliculas": [
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "16:30"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Mall del Sur",
+    "cine_slug": "cp-mall-del-sur",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-mall-del-sur",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:15",
+          "17:20"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "17:00",
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:00",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "20:40"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:30",
+          "16:40",
+          "17:40",
+          "18:30",
+          "21:45"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "17:10",
+          "19:20",
+          "21:30",
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "17:35"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "15:10",
+          "19:45",
+          "22:15"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:45",
+          "20:05"
+        ]
+      },
+      {
+        "nombre": "Frankie y los Monstruos",
+        "horarios": [
+          "14:55"
+        ]
+      },
+      {
+        "nombre": "El Corazón del Lobo",
+        "horarios": [
+          "17:30"
+        ]
+      },
+      {
+        "nombre": "El Conjuro 4: Últimos Ritos",
+        "horarios": [
+          "18:20",
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "Demon Slayer Castillo Infinito",
+        "horarios": [
+          "18:45"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "14:35",
+          "16:50",
+          "19:10",
+          "21:25"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "19:50",
+          "22:25"
+        ]
+      },
+      {
+        "nombre": "Alfa y Bravo",
+        "horarios": [
+          "21:55"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "16:15",
+          "22:05"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Norte",
+    "cine_slug": "cp-norte",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-norte",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:40",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "16:50",
+          "19:30",
+          "21:55"
+        ]
+      },
+      {
+        "nombre": "Terminal Zombie",
+        "horarios": [
+          "20:00",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Springsteen Música de Ninguna Parte",
+        "horarios": [
+          "16:15"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "15:50",
+          "18:00",
+          "20:10",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "14:50",
+          "16:40",
+          "18:30",
+          "20:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "17:10",
+          "19:25",
+          "21:30",
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "18:50"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "21:35"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "17:40",
+          "19:40"
+        ]
+      },
+      {
+        "nombre": "El Conjuro 4: Últimos Ritos",
+        "horarios": [
+          "21:45"
+        ]
+      },
+      {
+        "nombre": "Demon Slayer Castillo Infinito",
+        "horarios": [
+          "15:10"
+        ]
+      },
+      {
+        "nombre": "Cuando el Cielo se Equivoca",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "14:45",
+          "17:00",
+          "19:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "18:20",
+          "20:50"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "16:45",
+          "19:15"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Parque La Molina",
+    "cine_slug": "cp-parque-la-molina",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-parque-la-molina",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:30",
+          "17:30"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "19:10",
+          "20:20",
+          "21:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "15:50",
+          "20:50"
+        ]
+      },
+      {
+        "nombre": "Cuando el Cielo se Equivoca",
+        "horarios": [
+          "17:00",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "18:20"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Piura",
+    "cine_slug": "cp-piura",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-piura",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:40",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:30",
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:00",
+          "18:40",
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "15:50",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "18:40",
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Piura Real Plaza",
+    "cine_slug": "cp-piura-real-plaza",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-piura-real-plaza",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:10",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:00",
+          "17:10"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "17:00",
+          "21:10"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Plaza Santa Catalina",
+    "cine_slug": "cp-plaza-santa-catalina",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-plaza-santa-catalina",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "17:00"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Primavera",
+    "cine_slug": "cp-primavera",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-primavera",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:00",
+          "17:10"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "17:00",
+          "19:40"
+        ]
+      },
+      {
+        "nombre": "Springsteen Música de Ninguna Parte",
+        "horarios": [
+          "18:40"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:00",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:50",
+          "17:40",
+          "19:30",
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "14:45",
+          "19:50"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "17:30",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Cuando el Cielo se Equivoca",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "16:30"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "17:20",
+          "22:20"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Pro",
+    "cine_slug": "cp-pro",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-pro",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:40",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:00",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:15",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "19:10",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "16:50"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Pucallpa",
+    "cine_slug": "cp-pucallpa",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-pucallpa",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "21:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:30",
+          "17:30"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "18:50",
+          "21:20"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Puno",
+    "cine_slug": "cp-puno",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-puno",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "16:40"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "18:50",
+          "20:50"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:30",
+          "19:10"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:20",
+          "17:40",
+          "19:50",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "16:00",
+          "21:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Puruchuco",
+    "cine_slug": "cp-puruchuco",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-puruchuco",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:40",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "16:50",
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Terminal Zombie",
+        "horarios": [
+          "20:00",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Springsteen Música de Ninguna Parte",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "15:50",
+          "18:00",
+          "20:10",
+          "22:15"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "21:05"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "16:40",
+          "18:30",
+          "20:20"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "17:10",
+          "19:20",
+          "21:30",
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "18:20",
+          "20:50"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "14:45",
+          "16:10",
+          "17:15",
+          "18:40",
+          "19:45",
+          "21:10",
+          "22:15"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "17:35",
+          "19:25",
+          "21:15"
+        ]
+      },
+      {
+        "nombre": "El Corazón del Lobo",
+        "horarios": [
+          "16:10",
+          "18:35"
+        ]
+      },
+      {
+        "nombre": "Demon Slayer Castillo Infinito",
+        "horarios": [
+          "15:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "16:35",
+          "18:45",
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "16:45",
+          "19:15",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "15:05",
+          "22:25"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Risso",
+    "cine_slug": "cp-risso",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-risso",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:00",
+          "18:30"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Terminal Zombie",
+        "horarios": [
+          "18:00",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "15:50",
+          "20:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "20:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "18:40",
+          "21:10",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "Jesús Luz del Mundo",
+        "horarios": [
+          "16:30"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:20",
+          "17:10"
+        ]
+      },
+      {
+        "nombre": "Cuando el Cielo se Equivoca",
+        "horarios": [
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:10",
+          "17:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "19:10"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "16:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Salaverry",
+    "cine_slug": "cp-salaverry",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-salaverry",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "16:50",
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Springsteen Música de Ninguna Parte",
+        "horarios": [
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:00",
+          "20:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30",
+          "17:00",
+          "19:30",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "19:50",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Cuando el Cielo se Equivoca",
+        "horarios": [
+          "15:30"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:30",
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "17:30",
+          "20:00",
+          "22:30",
+          "21:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP San Borja",
+    "cine_slug": "cp-san-borja",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-san-borja",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "16:50",
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Springsteen Música de Ninguna Parte",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "18:50",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "20:50"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "16:40",
+          "18:40",
+          "20:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30",
+          "17:00",
+          "19:30",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "15:05"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:00",
+          "17:10",
+          "20:00"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "16:10"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "18:00",
+          "21:00",
+          "22:20"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP San Juan de Lurigancho",
+    "cine_slug": "cp-san-juan-de-lurigancho",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-san-juan-de-lurigancho",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:40",
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "16:50",
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Terminal Zombie",
+        "horarios": [
+          "20:00",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Springsteen Música de Ninguna Parte",
+        "horarios": [
+          "15:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "18:00",
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:20",
+          "17:20",
+          "18:40",
+          "20:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "17:10",
+          "19:20",
+          "21:30",
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "16:10",
+          "18:50"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "15:50",
+          "18:30",
+          "21:10",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "16:35",
+          "18:45"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "19:15",
+          "21:45"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "16:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP San Miguel",
+    "cine_slug": "cp-san-miguel",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-san-miguel",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:35",
+          "17:45"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "16:50",
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "Terminal Zombie",
+        "horarios": [
+          "20:00",
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Springsteen Música de Ninguna Parte",
+        "horarios": [
+          "16:10",
+          "18:45"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "15:50",
+          "18:00",
+          "20:15",
+          "22:15"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "20:50"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "16:50",
+          "18:50",
+          "21:20"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30",
+          "14:30",
+          "17:00",
+          "19:40",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "15:55",
+          "18:30",
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "14:40",
+          "16:10",
+          "17:00",
+          "18:40",
+          "19:20",
+          "21:10",
+          "21:40",
+          "15:00",
+          "17:50",
+          "20:50"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "15:20",
+          "17:40",
+          "22:15"
+        ]
+      },
+      {
+        "nombre": "La Casa de Muñecas de Gabby",
+        "horarios": [
+          "15:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "20:45",
+          "22:25"
+        ]
+      },
+      {
+        "nombre": "El Corazón del Lobo",
+        "horarios": [
+          "20:05"
+        ]
+      },
+      {
+        "nombre": "El Conjuro 4: Últimos Ritos",
+        "horarios": [
+          "22:05"
+        ]
+      },
+      {
+        "nombre": "Demon Slayer Castillo Infinito",
+        "horarios": [
+          "17:35"
+        ]
+      },
+      {
+        "nombre": "Cuando el Cielo se Equivoca",
+        "horarios": [
+          "17:50",
+          "20:10",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "14:45",
+          "17:00",
+          "19:20",
+          "21:30"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "16:45",
+          "19:15",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "Alfa y Bravo",
+        "horarios": [
+          "15:10"
+        ]
+      },
+      {
+        "nombre": "A Pesar de Ti",
+        "horarios": [
+          "15:20",
+          "18:20",
+          "21:20",
+          "17:20",
+          "19:50",
+          "22:20"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Santa Clara",
+    "cine_slug": "cp-santa-clara",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-santa-clara",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:10",
+          "17:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "18:40"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Santa Clara Qhatu Plaza",
+    "cine_slug": "cp-santa-clara-qhatu-plaza",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-santa-clara-qhatu-plaza",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "15:40",
+          "18:20",
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:30",
+          "17:40",
+          "20:00",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "18:30",
+          "21:00"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "16:10"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "18:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Tacna",
+    "cine_slug": "cp-tacna",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-tacna",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "La Hermanastra Fea",
+        "horarios": [
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "15:40",
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:20",
+          "17:30",
+          "19:40"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Trujillo Centro",
+    "cine_slug": "cp-trujillo-centro",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-trujillo-centro",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "19:50"
+        ]
+      },
+      {
+        "nombre": "El Resplandor [1980]",
+        "horarios": [
+          "22:00"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "15:50",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "17:00",
+          "21:30"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "15:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Ventanilla",
+    "cine_slug": "cp-ventanilla",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-ventanilla",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:20",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "16:00",
+          "18:10",
+          "20:20",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Tron Ares",
+        "horarios": [
+          "15:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "18:40",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "17:20"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Villa El Salvador",
+    "cine_slug": "cp-villa-el-salvador",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-villa-el-salvador",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "15:40"
+        ]
+      },
+      {
+        "nombre": "El Cadaver de la Novia 20 Aniversario [2005]",
+        "horarios": [
+          "20:00",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "16:10",
+          "21:10"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "17:40"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "18:40"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "22:00"
+        ]
+      }
+    ]
+  },
+  {
+    "cine": "CP Villa María del Triunfo",
+    "cine_slug": "cp-villa-maria-del-triunfo",
+    "url": "https://www.cineplanet.com.pe/cinemas/cp-villa-maria-del-triunfo",
+    "peliculas": [
+      {
+        "nombre": "Zoopocalipsis",
+        "horarios": [
+          "15:50",
+          "18:00"
+        ]
+      },
+      {
+        "nombre": "Volver al Futuro [1985] 40 Aniversario",
+        "horarios": [
+          "19:30"
+        ]
+      },
+      {
+        "nombre": "La Habitacion Negra",
+        "horarios": [
+          "20:10",
+          "22:10"
+        ]
+      },
+      {
+        "nombre": "Crepusculo [2008]",
+        "horarios": [
+          "16:20",
+          "19:00",
+          "21:40"
+        ]
+      },
+      {
+        "nombre": "Chavin de Huantar El Rescate del Siglo",
+        "horarios": [
+          "15:00",
+          "16:00",
+          "17:10",
+          "18:10",
+          "19:20",
+          "20:20",
+          "21:30",
+          "22:30"
+        ]
+      },
+      {
+        "nombre": "Teléfono Negro 2",
+        "horarios": [
+          "17:20",
+          "19:50",
+          "22:20"
+        ]
+      },
+      {
+        "nombre": "Good boy",
+        "horarios": [
+          "20:00",
+          "21:50"
+        ]
+      },
+      {
+        "nombre": "Chainsaw Man La Película Arco de Reze",
+        "horarios": [
+          "17:50"
+        ]
+      },
+      {
+        "nombre": "Catástrofe en el Aire La Caída del Vuelo A380",
+        "horarios": [
+          "16:50",
+          "22:00"
+        ]
+      }
+    ]
+  }
+]
