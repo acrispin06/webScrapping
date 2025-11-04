@@ -199,6 +199,58 @@ def limpiar_cache_y_cookies(driver):
         print(f"⚠️ Error limpiando cache: {str(e)[:50]}")
         return False
 
+def aceptar_cookies(driver):
+    """
+    Detecta y acepta el modal de cookies de privacidad
+    Retorna: True si se aceptó o no apareció, False si hubo error
+    """
+    try:
+        # Esperar un momento para que el modal aparezca si es que va a aparecer
+        time.sleep(2)
+        
+        # Buscar el modal de cookies
+        selectores_cookies = [
+            "button[data-testid='acceptance_cookies_modal_button']",  # Selector específico del HTML
+            "//button[contains(text(), 'Acepto')]",
+            "button[class*='mui-1go5pyp']",  # Clase específica del botón según HTML
+        ]
+        
+        boton_cookies = None
+        for selector in selectores_cookies:
+            try:
+                if selector.startswith("//"):
+                    botones = driver.find_elements(By.XPATH, selector)
+                else:
+                    botones = driver.find_elements(By.CSS_SELECTOR, selector)
+                
+                # Buscar el botón visible
+                for btn in botones:
+                    if btn.is_displayed():
+                        boton_cookies = btn
+                        break
+                
+                if boton_cookies:
+                    break
+            except:
+                continue
+        
+        if boton_cookies:
+            print("  → Modal de cookies detectado, aceptando...")
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton_cookies)
+            time.sleep(0.5)
+            driver.execute_script("arguments[0].click();", boton_cookies)
+            time.sleep(2)  # Esperar a que el modal desaparezca
+            print("  ✓ Cookies aceptadas")
+            return True
+        else:
+            # No apareció el modal (puede que ya se haya aceptado antes)
+            return True
+            
+    except Exception as e:
+        print(f"  ⚠️ Error manejando cookies: {str(e)[:50]}")
+        # No es crítico, continuar de todas formas
+        return True
+
 def hacer_login(driver):
     """
     Realiza el proceso de login en Cinemark
@@ -713,21 +765,40 @@ def procesar_pelicula_cine(driver, pelicula, cine_nombre, tiene_sesion):
                 return []
             
             print(f"    → Haciendo clic en horario...")
-            # Hacer clic en el horario
+            # Hacer clic en el horario (esto abrirá un modal/drawer oculto)
             driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", elemento_horario)
             time.sleep(0.5)
             driver.execute_script("arguments[0].click();", elemento_horario)
-            time.sleep(3)
+            print(f"    → Esperando que aparezca el modal con el botón 'Comprar entradas'...")
+            time.sleep(2)  # Esperar animación del modal
             
         except Exception as e:
             print(f"      ✗ Error haciendo clic en horario: {str(e)[:50]}")
             return []
         
-        # Hacer clic en "COMPRAR ENTRADAS"
+        # Esperar a que el MODAL/DRAWER se haga visible y buscar el botón "Comprar entradas"
         try:
+            # Primero esperar a que el contenedor del modal sea visible
+            # El modal tiene clase mui-xb6ga3 según tu HTML
+            try:
+                modal_container = WebDriverWait(driver, 10).until(
+                    EC.visibility_of_element_located((By.CSS_SELECTOR, "div.MuiBox-root.mui-xb6ga3"))
+                )
+                print(f"    ✓ Modal de compra apareció")
+            except:
+                # Intentar con selector alternativo
+                print(f"    → Buscando modal con selector alternativo...")
+                modal_container = WebDriverWait(driver, 5).until(
+                    EC.visibility_of_element_located((By.CSS_SELECTOR, "div[class*='mui-xb6ga3']"))
+                )
+            
+            # Ahora buscar el botón "Comprar entradas" dentro del modal
+            # Según tu HTML: button.MuiButton-fixedPrimary con texto "Comprar entradas"
             selectores_comprar = [
-                "button[data-testid='buy-tickets-button']",
+                "button.MuiButton-fixedPrimary",  # Clase específica del botón según tu HTML
+                "//button[contains(text(), 'Comprar entradas')]",
                 "//button[contains(text(), 'COMPRAR')]",
+                "button[class*='MuiButton-fixed'][class*='Primary']",
             ]
             
             boton_comprar = None
@@ -741,17 +812,25 @@ def procesar_pelicula_cine(driver, pelicula, cine_nombre, tiene_sesion):
                         boton_comprar = WebDriverWait(driver, 5).until(
                             EC.element_to_be_clickable((By.CSS_SELECTOR, selector))
                         )
-                    break
+                    
+                    # Verificar que esté visible
+                    if boton_comprar.is_displayed():
+                        print(f"    ✓ Botón 'Comprar entradas' encontrado con: {selector}")
+                        break
+                    else:
+                        boton_comprar = None
                 except:
                     continue
             
             if not boton_comprar:
-                print(f"    ✗ No se encontró botón COMPRAR ENTRADAS")
+                print(f"    ✗ No se encontró botón COMPRAR ENTRADAS en el modal")
                 return []
             
-            print(f"    → Haciendo clic en COMPRAR ENTRADAS...")
+            print(f"    → Haciendo clic en 'Comprar entradas'...")
+            driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", boton_comprar)
+            time.sleep(0.5)
             driver.execute_script("arguments[0].click();", boton_comprar)
-            time.sleep(3)  # Esperar pantalla de pre-compra
+            time.sleep(3)  # Esperar pantalla de selección de entradas
             
         except Exception as e:
             print(f"    ✗ Error haciendo clic en COMPRAR: {str(e)[:50]}")
@@ -834,24 +913,20 @@ def main():
         # Configurar driver
         driver = configurar_driver()
         
+        # IMPORTANTE: Ir a la página principal y aceptar cookies ANTES del login
+        print("→ Navegando a la página principal...")
+        driver.get(BASE_URL)
+        time.sleep(3)
+        
+        # Aceptar cookies ANTES de cualquier otra acción
+        print("→ Verificando modal de cookies...")
+        aceptar_cookies(driver)
+        
         # IMPORTANTE: Hacer login AL INICIO para mantener sesión durante toda la extracción
         tiene_sesion = bool(EMAIL and PASSWORD)
         if tiene_sesion:
-            print("→ Realizando login inicial...")
+            print("\n→ Realizando login inicial...")
             print("  (Esto evitará el modal de login en cada compra)")
-            # Ir a la página principal primero
-            driver.get(BASE_URL)
-            time.sleep(3)
-            
-            # Aceptar cookies si aparecen
-            try:
-                boton_cookies = driver.find_elements(By.CSS_SELECTOR, "button[data-testid='acceptance_cookies_modal_button']")
-                if boton_cookies and boton_cookies[0].is_displayed():
-                    print("  → Aceptando cookies...")
-                    driver.execute_script("arguments[0].click();", boton_cookies[0])
-                    time.sleep(2)
-            except:
-                pass
             
             # Hacer login
             if hacer_login(driver):
@@ -860,7 +935,7 @@ def main():
                 print("⚠️ No se pudo iniciar sesión, continuando sin login\n")
                 tiene_sesion = False
         else:
-            print("→ Modo sin login\n")
+            print("\n→ Modo sin login\n")
         
         # Cargar películas desde la página principal
         peliculas = cargar_peliculas_desde_lista(driver)
